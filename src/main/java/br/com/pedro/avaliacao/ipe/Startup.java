@@ -30,14 +30,15 @@ public class Startup {
 				.apis(RequestHandlerSelectors.basePackage(this.getClass().getPackageName()))
 				.paths(PathSelectors.any())
 				.build()
-				.useDefaultResponseMessages(true);
+				.useDefaultResponseMessages(false);
 	}
 	
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				.title("Avaliação Java IPE")
 				.description("API desenvolvido para desafio IPE")
-				.version("1.0")
+				.termsOfServiceUrl("http://localhost:5000")
+				.version("2.0")
 				.contact(new Contact(
 						"Pedro Gomes",
 						"https://github.com/pedrohsgomes",

@@ -63,7 +63,7 @@ public class DataBaseManager<E extends Serializable> implements IDatabaseReposit
 
 		try {
 			File file = new File(dataBasePath + "/" + path + "/" + fileName + ".dat");
-//			file.mkdirs();
+			new File(file.getParent()).mkdirs();
 			file.createNewFile();
 			fw = new FileWriter(file, Charsets.UTF_8);
 			fw.write(json);
